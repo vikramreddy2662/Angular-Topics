@@ -1,0 +1,7 @@
+when we use the same dependency injection and inject same instance of service class to parent component and it's child components 
+then dependency injection in child component overrides dependency injection of its parent class .
+
+child class provider overrides parent parent class provider.
+
+Instead of providing provider of class in each  child component to access the same instance of a service class we can add provider 
+in component class of  a parent component  and use it in each child component.
