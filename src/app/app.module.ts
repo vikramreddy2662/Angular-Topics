@@ -8,6 +8,7 @@ import { HomeComponent } from './header/home/home.component';
 import { AdminComponent } from './header/admin/admin.component';
 import { HeroComponent } from './header/home/hero/hero.component';
 import { SidebarComponent } from './header/home/sidebar/sidebar.component';
+import { Service } from './Services/Services.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { SidebarComponent } from './header/home/sidebar/sidebar.component';
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),Service
   ],
   bootstrap: [AppComponent]
 })
