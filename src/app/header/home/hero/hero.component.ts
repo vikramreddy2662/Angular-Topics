@@ -14,7 +14,7 @@ export class HeroComponent {
 
   // }
 
-subService=Inject(Service);
+subService=Inject(Service);//we can also use inject method to get instance of a class(dependency) available from angular 14
 
 
   OnSubscribe() {

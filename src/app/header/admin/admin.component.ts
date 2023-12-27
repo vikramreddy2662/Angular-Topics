@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { UserService } from '../../Services/user.service';
-import { USER_TOKEN } from './../../app.module';
+import {USER_TOKEN} from './../../app.module';
 
 @Component({
   selector: 'app-admin',
