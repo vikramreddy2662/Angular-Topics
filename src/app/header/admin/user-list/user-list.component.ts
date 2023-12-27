@@ -1,6 +1,7 @@
 import { Component,Inject } from '@angular/core';
 import { UserService } from '../../../Services/user.service';
-import { User } from '../../../Models/User';
+import {USER_TOKEN} from './../../../app.module';
+
 
 @Component({
   selector: 'app-user-list',
@@ -11,7 +12,7 @@ import { User } from '../../../Models/User';
 export class UserListComponent {
 
 
-constructor(@Inject('USER_SERVICE') private userservice :UserService){
+constructor(@Inject(USER_TOKEN) private userservice :UserService){
 
 }
 

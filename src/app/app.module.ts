@@ -1,4 +1,4 @@
-import {  NgModule } from '@angular/core';
+import {  NgModule,InjectionToken } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,8 +12,9 @@ import { Service } from './Services/SubScribeServices.service';
 import { UserListComponent } from './header/admin/user-list/user-list.component';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './Services/user.service';
-import { LoggerService } from './Services/LoggerService';
+//import { LoggerService } from './Services/LoggerService';
 
+export const USER_TOKEN=new InjectionToken<UserService>('USER_SERVICE');
 
 
 @NgModule({
@@ -33,8 +34,8 @@ import { LoggerService } from './Services/LoggerService';
   ],
   providers: [
     provideClientHydration(),Service,
-    {provide:'USER_SERVICE',useClass:UserService},
-    LoggerService
+    {provide: USER_TOKEN, useClass : UserService},//Using unique tokens for depedency injection by specifying provide property with token name.
+   
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, Inject, inject } from '@angular/core';
 import { Service } from '../../../Services/SubScribeServices.service';
 
 @Component({
@@ -10,9 +10,12 @@ export class HeroComponent {
 
 
   //how to provide
-  constructor(private subService:Service){
+  // constructor(private subService:Service){
 
-  }
+  // }
+
+subService=Inject(Service);
+
 
   OnSubscribe() {
 
