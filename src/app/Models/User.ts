@@ -11,4 +11,4 @@ export class User{
     gender: string;
     subType: string;
     status: string;
-}
+}   

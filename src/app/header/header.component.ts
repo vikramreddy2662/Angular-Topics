@@ -1,5 +1,6 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation,Inject } from '@angular/core';
 import { Service } from '../Services/SubScribeServices.service' ;
+
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ import { Service } from '../Services/SubScribeServices.service' ;
 export class HeaderComponent {
 
 //=>tells angular how to provide.
-constructor(private subService:Service){
+constructor(@Inject('USER_SERVICE') private subService:Service){
 
 }
 

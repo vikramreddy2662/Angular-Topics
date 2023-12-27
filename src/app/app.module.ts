@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {  NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,8 @@ import { UserListComponent } from './header/admin/user-list/user-list.component'
 import { FormsModule } from '@angular/forms';
 import { UserService } from './Services/user.service';
 import { LoggerService } from './Services/LoggerService';
+
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { LoggerService } from './Services/LoggerService';
     FormsModule
   ],
   providers: [
-    provideClientHydration(),Service,UserService,LoggerService
+    provideClientHydration(),Service,
+    {provide:'USER_SERVICE',useClass:UserService},
+    LoggerService
   ],
   bootstrap: [AppComponent]
 })

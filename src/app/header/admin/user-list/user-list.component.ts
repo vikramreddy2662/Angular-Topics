@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Inject } from '@angular/core';
 import { UserService } from '../../../Services/user.service';
 import { User } from '../../../Models/User';
 
@@ -11,7 +11,7 @@ import { User } from '../../../Models/User';
 export class UserListComponent {
 
 
-constructor(private userservice :UserService){
+constructor(@Inject('USER_SERVICE') private userservice :UserService){
 
 }
 
@@ -19,3 +19,4 @@ userlist = this.userservice.GetAllUsers();
 
 
 }
+//here we are using string as a unique identifier to get the instance of that class 
