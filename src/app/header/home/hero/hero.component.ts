@@ -1,13 +1,15 @@
 import { Component, inject } from '@angular/core';
-import { Service } from './../../../Services/Services.service';
+import { Service } from '../../../Services/SubScribeServices.service';
 
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
-  providers: [Service]
+  //providers: [Service]//what to provide
 })
 export class HeroComponent {
 
+
+  //how to provide
   constructor(private subService:Service){
 
   }

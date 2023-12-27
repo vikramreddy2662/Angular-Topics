@@ -1,11 +1,11 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { Service } from './../Services/Services.service' ;
+import { Service } from '../Services/SubScribeServices.service' ;
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   encapsulation:ViewEncapsulation.None,
-  providers:[Service]//=>tells angular what to provide
+ // providers:[Service]//=>tells angular what to provide
 })
 export class HeaderComponent {
 

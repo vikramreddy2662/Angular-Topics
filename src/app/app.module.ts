@@ -8,7 +8,11 @@ import { HomeComponent } from './header/home/home.component';
 import { AdminComponent } from './header/admin/admin.component';
 import { HeroComponent } from './header/home/hero/hero.component';
 import { SidebarComponent } from './header/home/sidebar/sidebar.component';
-import { Service } from './Services/Services.service';
+import { Service } from './Services/SubScribeServices.service';
+import { UserListComponent } from './header/admin/user-list/user-list.component';
+import { FormsModule } from '@angular/forms';
+import { UserService } from './Services/user.service';
+import { LoggerService } from './Services/LoggerService';
 
 @NgModule({
   declarations: [
@@ -17,14 +21,16 @@ import { Service } from './Services/Services.service';
     HomeComponent,
     AdminComponent,
     HeroComponent,
-    SidebarComponent
+    SidebarComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
-    provideClientHydration(),Service
+    provideClientHydration(),Service,UserService,LoggerService
   ],
   bootstrap: [AppComponent]
 })

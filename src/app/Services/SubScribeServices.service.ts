@@ -1,3 +1,7 @@
+import { Injectable } from "@angular/core";
+import { InjectSetupWrapper } from "@angular/core/testing";
+
+@Injectable()
 export class Service{
 
     OnSubscribeClicked(type:any){

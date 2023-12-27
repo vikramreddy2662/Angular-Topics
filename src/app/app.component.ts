@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { Service } from './Services/Services.service';
+import { Service } from './Services/SubScribeServices.service';
 
 @Component({
   selector: 'app-root',
