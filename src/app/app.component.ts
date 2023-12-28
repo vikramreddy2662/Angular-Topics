@@ -30,9 +30,7 @@ export class AppComponent {
     setTimeout(() => { observer.complete() }, 4000)
 
     //emmitting data in chunks 
-
-
-  });
+} );
 
   //observables emits 3 types of events next error complete. emits data as call back.
 
@@ -60,7 +58,7 @@ export class AppComponent {
 
       },
 
-      error(err) {
+      error(err) {  
         alert(err.message);
       },
       complete() {
