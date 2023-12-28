@@ -15,7 +15,15 @@ export class AppComponent {
 
   myObservable = new Observable((observer) => {
 
-    observer.next([1, 21, 34, 53, 21, 56]);
+    // observer.next([1, 21, 34, 53, 21, 56]); to emit whole data at once.
+
+   setTimeout(()=>{ observer.next(11)},1000);
+   setTimeout(()=>{ observer.next(43)},2000)
+   setTimeout(()=>{ observer.next(87)},3000)
+   setTimeout(()=>{ observer.next(96)},5000)
+   setTimeout(()=>{ observer.next(1)},7000)
+   setTimeout(()=>{ observer.next(56)},6000)
+
 
   });
 
@@ -26,7 +34,7 @@ export class AppComponent {
 
     this.myObservable.subscribe((val: any) => {
 
-      this.data = val;
+      this.data.push(val);
 
 
     });
